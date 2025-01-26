@@ -29,7 +29,11 @@ Guidelines:
 - "Brainrot" for entertainment, idle browsing, or non-productive leisure
 - "Exercise" for physical activities and workouts
 - "Social" for interactions with friends and family
-- "Other" for anything that doesn't fit above"""
+- "Other" for anything that doesn't fit above
+
+In your response, only return the category name, no other text.
+"""
+
 
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo",
