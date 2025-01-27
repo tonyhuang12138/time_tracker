@@ -36,12 +36,12 @@ In your response, only return the category name, no other text.
 
 
         response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are a precise categorization assistant."},
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.3,
+            temperature=0,
             max_tokens=50
         )
 
@@ -51,4 +51,4 @@ In your response, only return the category name, no other text.
         """Categorize a batch of events"""
         for event in events:
             event['category'] = self.categorize_event(event['summary'])
-        return events 
+        return events
