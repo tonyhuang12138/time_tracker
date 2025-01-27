@@ -42,7 +42,7 @@ In your response, only return the category name, no other text.
                 {"role": "user", "content": prompt}
             ],
             temperature=0,
-            max_tokens=50
+            max_tokens=5
         )
 
         return response.choices[0].message.content.strip()
